@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+div{
+    margin:  0 0 20px 20px;
+}
+
+.lista-icones-unicode ul{
+    list-style-type: none;
+}
+
+.lista-icones-unicode ul li:nth-child(1)::before{
+    content: "🎥";
+}
+
+.lista-icones-unicode ul li:nth-child(2):before{
+    content: "🚴‍♂️";
+}
+
+.lista-icones-unicode ul li:nth-child(3):before{
+    content: "🏊‍♂️";
+}
+
+.lista-icones-unicode ul li:nth-child(4):before{
+    content: "📚";
+}
+
+.texto p:first-of-type{
+    color: red;
+}
+
+.texto p::first-letter{
+    color: blue;
+    font-size: 20px;
+}
+
+/*last-of-type*/
+.texto p:nth-last-of-type(1){
+    font-family: Helvetica, sans-serif;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Milton Salgado Leandro">
+
+        <title>Revisão HTML</title>
+
+        <link href="css/style.css" rel="stylesheet">
+        <link href="images/icons/icons8-task-96.png" rel="icon">
+
+    </head>
+    <body>
+        <div class="poesia-colorida">
+            <h3>1) Poesia colorida</h3>
+            <br>
+
+    <pre>
+
+           <span><b>Motivo</b></span>
+    <span>Cecília Meireles</span>
+
+    <span>
+    Eu canto porque o instante existe
+                 e a minha vida está completa.
+    </span>
+
+    <span>
+    <u>Não sou alegre nem sou triste:</u>
+                 sou poeta.               
+    </span>
+
+    <span>
+    Irmão das coisas fugidias,
+                 não sinto gozo nem tormento.
+    </span>
+
+    <span>
+    Atravesso noites e dias
+                 no vento.   
+    </span>
+
+    </pre>
+            
+        </div>
+
+        <div class="paragrafo">
+            <h3>2) Parágrafo</h3>
+            <br>
+            <p>
+                A carioca Cecília Meireles (1901-1964), responsável por uma poesia intensa, intimista e visceral é,
+                <br>
+                sem dúvida, uma das maiores escritoras da literatura brasileira.
+            </p>
+            <img src="images/cecilia-meireles.png" alt="Cecília Meireles">
+            <p>
+                Seus poemas, <b>extremamente musicais</b>, não estavam filiados a nenhum movimento literário
+                <br>
+                específico, embora a maioria dos críticos rotule a escritora como pertencendo à <i>segunda geração</i> do
+                <br>
+                modernismo brasileiro. Entre os seus <u>temas mais frequentes</u> estão o isolamento, a solidão, a
+                <br>
+                passagem do tempo, a efemeridade da vida, a identidade, o abandono e a perda.
+            </p>
+        </div> <!-- paragrafo -->
+
+        <div class="listas-de-preferencias">
+            <h3>3) Listas de preferências</h3>
+            <br>
+
+            <ul>
+                <li>
+                    Livros &#128218
+                    <ol>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    Filmes &#127902
+                    <ol type="a">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    Esportes &#127941
+                    <ol type="I">
+                        <li>xxx</li>
+                        <li>xxx</li>
+                        <li>xxx</li>
+                    </ol>
+                </li>
+            </ul>
+        </div> <!-- listas-de-preferencias -->
+
+        <div class="tabela">
+            <h3>4) Tabela</h3>
+            <br>
+
+            <table>
+                <tr>
+                    <th colspan="3">Turma de Desenho</th>
+                </tr>
+                <tr>
+                    <th>Nome</th>
+                    <th>Matrícula</th>
+                    <th>CRA</th>
+                </tr>
+                <tr>
+                    <td>Maria Flor</td>
+                    <td>2022201065</td>
+                    <td>7,15</td>
+                </tr>
+                <tr>
+                    <td>Augusto César</td>
+                    <td>2022201043</td>
+                    <td>8,02</td>
+                </tr>
+                <tr>
+                    <td>Pedro Carlos </td>
+                    <td>2022201056</td>
+                    <td><b>4,32</b></td>
+                </tr>
+                <tr>
+                    <td>Tereza Cristina </td>
+                    <td>2022201079 </td>
+                    <td><b>1,45</b></td>
+                </tr>
+                <tr>
+                    <th colspan="2">Média CRA </th>
+                    <th>5,24</th>
+                </tr>
+            </table>
+        </div> <!-- tabelas -->
+
+        <div class="formulario">
+            <h3>5) Crie um Formulário para ser usado na avaliação das disciplinas do BSI. O formulário deve ter 5 perguntas com diferentes formatos.</h3>
+            <br>
+
+            <form>
+                <p>Qual o nome da base numérica principal dos computadores?</p>
+                <span>Resposta: </span><input type="text">
+                <br><br>
+                <p>Quantos digitos tem a base hexadecimal?</p>
+                <span>Resposta: </span><input type="number" name="" id="">
+                <br><br>
+                <p>Explique o que é organização, ambiente e sistema de informação:</p>
+                <span>Resposta:</span>
+                <br>
+                <textarea name="" id="" cols="60" rows="10"></textarea>
+                <br><br>
+                <p>Qual a tag para definir uma linha de uma tabela em HTML?</p>
+                <span>Resposta:</span>
+                <select name="alternativas">
+                    <option value="li">li</option>
+                    <option value="th">th</option>
+                    <option value="td">td</option>
+                    <option value="tr">tr</option>
+                </select>
+                <br><br>
+                <p>Qual matéria a seguir utiliza a argumentação e dissertação para elaboração de diálogos e documentos?</p>
+                <div>
+                    <input type="radio" name="alternativa" id=""><span>Matemática Básica</span>
+                    <br>
+                    <input type="radio" name="alternativa" id=""><span>Teorias e Práticas Discursivas</span>
+                </div>
+                
+                <input type="submit" value="Enviar respostas">
+            </form>
+        </div>  <!-- formulario -->
+
+    </body>
+</html>

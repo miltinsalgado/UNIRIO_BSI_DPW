@@ -1,0 +1,16 @@
+## 👨🏻‍💻 UNIRIO - Bacharelado em Sistemas de Informação - Desenvolvimento de Páginas Web 👨🏻‍💻
+Repositório utilizado para meus estudos na disciplina de Técnicas de Programação 1.
+
+### 🛠️ Tecnologias aprendidas e utilizadas 🛠️
+<div style="display: inline_block">
+    <img align="center" alt="Miltin-HTML" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+    <img align="center" alt="Miltin-CSS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+    <img align="center" alt="Miltin-JS" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+</div>
+<br>
+
+Agradeço a sua atenção e leitura deste documento!
+
+Atenciosamente, 
+
+Milton Salgado ⚡
