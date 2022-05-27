@@ -1,5 +1,6 @@
 ## 👨🏻‍💻 UNIRIO - Bacharelado em Sistemas de Informação - Desenvolvimento de Páginas Web 👨🏻‍💻
-Repositório utilizado para meus estudos na disciplina de Técnicas de Programação 1.
+Repositório utilizado para meus estudos na disciplina de Desenvolvimento de Páginas Web.
+
 
 ### 🛠️ Tecnologias aprendidas e utilizadas 🛠️
 <div style="display: inline_block">
