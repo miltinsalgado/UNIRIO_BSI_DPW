@@ -10,7 +10,7 @@ window.onload = function gerarResposta(){
     paragrafo_resposta_1.innerHTML = resposta_1;
     document.body.appendChild(paragrafo_resposta_1);
 
-    var resposta_2 = "Há " + num_p_info + " parágrafo(s) da classe \"info\" e " + num_p_SI + " parágrafo(s) da classe \"SI\"";
+    var resposta_2 = "Há " + num_p_info + " parágrafo(s) da classe \"info\" e " + num_p_SI + " parágrafo(s) da classe \"SI\".";
     const paragrafo_resposta_2 = document.createElement("p");
     paragrafo_resposta_2.innerHTML = resposta_2;
     document.body.appendChild(paragrafo_resposta_2);
