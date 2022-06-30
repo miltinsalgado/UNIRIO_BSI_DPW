@@ -1,4 +1,4 @@
-window.onload = function gerarRespostas(){
+window.addEventListener("load", function(gerarResposta1){
     const num_h2 = document.getElementsByTagName("h2").length;
     const num_p = document.getElementsByTagName("p").length;
     const num_p_info = document.getElementsByClassName("info").length;
@@ -8,7 +8,9 @@ window.onload = function gerarRespostas(){
     const paragrafo_resposta_1 = document.createElement("p");
     paragrafo_resposta_1.innerHTML = resposta_1;
     document.body.appendChild(paragrafo_resposta_1);
+})
 
+window.addEventListener("load", function(gerarResposta2){
     var resposta_2 = "Há " + num_p_info + " parágrafo(s) da classe \"info\" e " + num_p_SI + " parágrafo(s) da classe \"SI\".";
     const paragrafo_resposta_2 = document.createElement("p");
     paragrafo_resposta_2.innerHTML = resposta_2;
@@ -18,9 +20,17 @@ window.onload = function gerarRespostas(){
     const cabecalhos = document.getElementsByTagName("h2");
     segundo_h2.innerHTML = cabecalhos[1].innerHTML;
     document.body.appendChild(segundo_h2);
+})
 
+window.addEventListener("load", function(gerarResposta3){
     const terceiro_p = document.createElement("p");
     const paragrafos = document.getElementsByTagName("p");
     terceiro_p.innerHTML = paragrafos[2].innerHTML;
     document.body.appendChild(terceiro_p);
-}
+})
+
+window.addEventListener("load", function(mudarCores){
+    document.getElementsByTagName("h2")[0].style.color = "red";
+    document.getElementsByTagName("h2")[0].style.backgroundColor = "yellow";
+
+})
