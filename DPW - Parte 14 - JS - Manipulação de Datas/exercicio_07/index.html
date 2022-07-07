@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Milton Salgado Leandro">
+
+        <title>Exercício JS</title>
+
+        <link href="css/style.css" rel="stylesheet">
+        <link href="images/icons/icons8-task-96.png" rel="icon">
+
+        <script src="js/functions.js"></script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="conteudo-do-dia">
+                <img id="imagem-dia" src="" alt="Imagem do dia">
+                <p id="paragrafo-dia"></p>
+            </div>
+    
+            <div class="formulario-de-data">
+    
+                <form method="get">
+    
+                    <div class="input-container">
+                        <label for="data">Selecione uma data: </label>
+                        <input type="date" id="data">
+                    </div>
+    
+                    <div class="input-container">
+                        <input type="button" value="Informar dia da semana" onclick="mostraDiaSemana()">
+                    </div>
+    
+                    <div class="dia-semana-container">
+                        <label>Dia da semana da data selecionada: </label>
+                        <span id="dia-semana">Data não selecionada</span>
+                    </div>
+    
+                </form>
+            </div>
+    
+            <div class="fim-de-ano">
+                <p id="dias-faltantes"></p>
+            </div>
+        </div>
+
+    </body>
+</html>
