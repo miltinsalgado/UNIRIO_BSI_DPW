@@ -17,25 +17,25 @@ function verificaDiaSemana(dia_semana){
     switch (dia_semana)
     {
         case 0:
-            return "Domingo";
-
-        case 1:
             return "Segunda-Feira";
 
-        case 2:
+        case 1:
             return "Terça-Feira";
 
-        case 3:
+        case 2:
             return "Quarta-Feira";
 
-        case 4:
+        case 3:
             return "Quinta-Feira";
 
-        case 5:
+        case 4:
             return "Sexta-Feira";
 
-        case 6:
+        case 5:
             return "Sábado";
+
+        case 6:
+            return "Domingo";
 
         default:
             return "Data Inválida";
