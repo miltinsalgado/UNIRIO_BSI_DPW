@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+h2{
+    margin: 15px auto;
+}
+
+p{
+    margin: 10px auto;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2%;
+    text-align: center;
+}
+
+.link-wrapper .link-do-dia a{
+    text-decoration: none;
+}
+
+.imagens{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1280px;
+}
+
+.imagem-wrapper{
+    width: calc(100% / 4);
+}
+
+.imagem{
+    width: 100%;
+    height: 100%;
+    border: 4px solid black;
+    border-radius: 20px;
+}
+
+.botao{
+    margin-top: 20px;
+}
+
+.botao button{
+    color: white;
+    background-color: darkgreen;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1%;
+    cursor: pointer;
+}

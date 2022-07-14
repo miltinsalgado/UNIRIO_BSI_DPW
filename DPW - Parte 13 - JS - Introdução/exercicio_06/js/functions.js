@@ -1,35 +1,35 @@
-window.addEventListener("load", function gerarResposta3(){
-    const num_h2 = document.getElementsByTagName("h2").length;
-    const num_p = document.getElementsByTagName("p").length;
-    const num_p_info = document.getElementsByClassName("info").length;
-    const num_p_SI = document.getElementsByClassName("SI").length;
+window.addEventListener("load", function geraResposta3(){
+    const numH2 = document.getElementsByTagName("h2").length;
+    const numP = document.getElementsByTagName("p").length;
+    const numPInfo = document.getElementsByClassName("info").length;
+    const numPSI = document.getElementsByClassName("SI").length;
     
-    var resposta_1 = "Há " + num_p + " parágrafo(s) e " + num_h2 + " cabeçalho(s) H2 na página (não contando com os adicionados por JavaScript).";
-    const paragrafo_resposta_1 = document.createElement("p");
-    paragrafo_resposta_1.innerHTML = resposta_1;
-    document.body.appendChild(paragrafo_resposta_1);
+    var resposta1 = "Há " + numP + " parágrafo(s) e " + numH2 + " cabeçalho(s) H2 na página (não contando com os adicionados por JavaScript).";
+    const paragrafoResposta1 = document.createElement("p");
+    paragrafoResposta1.innerHTML = resposta1;
+    document.body.appendChild(paragrafoResposta1);
 })
 
-window.addEventListener("load", function gerarResposta2(){
-    var resposta_2 = "Há " + num_p_info + " parágrafo(s) da classe \"info\" e " + num_p_SI + " parágrafo(s) da classe \"SI\".";
-    const paragrafo_resposta_2 = document.createElement("p");
-    paragrafo_resposta_2.innerHTML = resposta_2;
-    document.body.appendChild(paragrafo_resposta_2);
+window.addEventListener("load", function geraResposta2(){
+    var resposta2 = "Há " + numPInfo + " parágrafo(s) da classe \"info\" e " + numPSI + " parágrafo(s) da classe \"SI\".";
+    const paragrafoResposta2 = document.createElement("p");
+    paragrafoResposta2.innerHTML = resposta2;
+    document.body.appendChild(paragrafoResposta2);
 
-    const segundo_h2 = document.createElement("h2");
+    const segundoH2 = document.createElement("h2");
     const cabecalhos = document.getElementsByTagName("h2");
-    segundo_h2.innerHTML = cabecalhos[1].innerHTML;
-    document.body.appendChild(segundo_h2);
+    segundoH2.innerHTML = cabecalhos[1].innerHTML;
+    document.body.appendChild(segundoH2);
 })
 
-window.addEventListener("load", function gerarResposta3(){
-    const terceiro_p = document.createElement("p");
+window.addEventListener("load", function geraResposta3(){
+    const terceiroP = document.createElement("p");
     const paragrafos = document.getElementsByTagName("p");
-    terceiro_p.innerHTML = paragrafos[2].innerHTML;
-    document.body.appendChild(terceiro_p);
+    terceiroP.innerHTML = paragrafos[2].innerHTML;
+    document.body.appendChild(terceiroP);
 })
 
-window.addEventListener("load", function mudarCores(){
+window.addEventListener("load", function mudaaCores(){
     document.getElementsByTagName("h2")[0].style.color = "red";
     document.getElementsByTagName("h2")[0].style.backgroundColor = "yellow";
 })
