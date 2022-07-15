@@ -1,4 +1,4 @@
-window.addEventListener("load", function criaLinkDoDia(){
+window.addEventListener("load", function criaLinkDoDia() {
     const DATA = new Date();
     diaSemana = DATA.getDay();
 
@@ -9,7 +9,7 @@ window.addEventListener("load", function criaLinkDoDia(){
 
     const diasSemana = ["Domingo", "Segunda-Feira", "Terça-Feira", "Quarta-Feira", "Quinta-Feira", "Sexta-Feira", "Sábado"];
 
-    switch (diaSemana){
+    switch (diaSemana) {
         case 0:
             link.conteudoLink = "Link de " + diasSemana[diaSemana];
             link.enderecoLink = "https://www.twitch.tv";
@@ -51,7 +51,7 @@ window.addEventListener("load", function criaLinkDoDia(){
 
 })
 
-function trocaPosicaoImagens(){
+function trocaPosicaoImagens() {
     let imagens = document.getElementsByClassName("imagem");
     let imagemTemp = {
         src: "",

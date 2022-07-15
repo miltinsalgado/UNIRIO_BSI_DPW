@@ -1,39 +1,39 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100%;
 }
 
-h2{
+h2 {
     margin: 15px auto;
 }
 
-p{
+p {
     margin: 10px auto;
 }
 
-.container{
+.container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2%;
     text-align: center;
 }
 
-.imagens{
+.imagens {
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
 }
 
-.imagem-wrapper{
+.imagem-wrapper {
     width: calc(100% / 4);
 }
 
-.imagem{
+.imagem {
     width: 100%;
     height: 100%;
     border: 4px solid black;
@@ -41,22 +41,22 @@ p{
     cursor: pointer;
 }
 
-.texto{
+.texto {
     margin-top: 20px;
     text-align: center;
 }
 
-.texto p{
+.texto p {
     margin: 20px 0;
     font-size: 20px;
 }
 
-.botao{
+.botao {
     margin: 20px auto 0 auto;
     text-align: center;
 }
 
-.botao button{
+.botao button {
     color: white;
     background-color: blue;
     border: none;

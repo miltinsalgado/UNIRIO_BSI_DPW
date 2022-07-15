@@ -1,74 +1,74 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-html, body{
+html, body {
     height: 100%;
 }
 
-div{
+div {
     margin:  0 0 20px 20px;
 }
 
-.poesia-colorida pre span:nth-child(1), .poesia-colorida pre span:nth-child(2){
+.poesia-colorida pre span:nth-child(1), .poesia-colorida pre span:nth-child(2) {
     color: red;
     background-color: yellow;
 }
 
-.poesia-colorida pre span:nth-child(2n):not(.poesia-colorida pre span:nth-child(2)){
+.poesia-colorida pre span:nth-child(2n):not(.poesia-colorida pre span:nth-child(2)) {
     color: seagreen;
 }
 
-.poesia-colorida pre span:nth-child(2n+1):not(.poesia-colorida pre span:nth-child(1)){
+.poesia-colorida pre span:nth-child(2n+1):not(.poesia-colorida pre span:nth-child(1)) {
     color: royalblue;
 }
 
-.paragrafo{
+.paragrafo {
     width: fit-content;
 }
 
-.paragrafo img{
+.paragrafo img {
     width: 300px;
     display: block;
     margin: 10px auto;
 }
 
-.paragrafo p:nth-of-type(2){
+.paragrafo p:nth-of-type(2) {
     border: 5px solid red;
     border-radius: 3px;
     background-color: rgb(255, 194, 194);
     padding-right: 5px;
 }
 
-.paragrafo p:nth-of-type(2) b{
+.paragrafo p:nth-of-type(2) b {
     color: royalblue;
 }
 
-.listas-de-preferencias ul{
+.listas-de-preferencias ul {
     margin: 0 0 20px 20px;
 }
 
-.listas-de-preferencias ul ol{
+.listas-de-preferencias ul ol {
     list-style-position: inside;
 }
 
-.tabela table, .tabela table tr th, .tabela table tr td{
+.tabela table, .tabela table tr th, .tabela table tr td {
     padding: 5px;
     border: 1px solid black;
     border-collapse: collapse;
 }
 
-.tabela table tr:nth-of-type(1) th{
+.tabela table tr:nth-of-type(1) th {
     color: red;
 }
 
-.tabela table tr:nth-of-type(5) td:nth-child(3), .tabela table tr:nth-of-type(6) td:nth-child(3){
+.tabela table tr:nth-of-type(5) td:nth-child(3), .tabela table tr:nth-of-type(6) td:nth-child(3) {
     color: red;
 }
 
-table tr:nth-of-type(2n), table tr:nth-of-type(1), table tr:nth-of-type(7){
+table tr:nth-of-type(2n), table tr:nth-of-type(1), table tr:nth-of-type(7) {
     background-color: rgb(133, 166, 219);
 }

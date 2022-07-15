@@ -1,36 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100%;
 }
 
-div{
+div {
     margin:  0 0 20px 20px;
 }
 
-body{
+body {
     animation: animacao_cor_de_fundo 4s infinite;
 }
 
 @keyframes animacao_cor_de_fundo {
-    0%{
+    0% {
         background-color: blue;
     }
 
-    50%{
+    50% {
         background-color: yellow;
     }
 
-    100%{
+    100% {
         background-color: blue;
     }
 }
 
-.imagens .imagem:nth-child(1){
+.imagens .imagem:nth-child(1) {
     margin: 100px auto;
     width: 500px;
     height: 300px;
@@ -40,13 +40,13 @@ body{
     transition: all linear 2s;
 }
 
-.imagens .imagem:nth-child(1):hover{
+.imagens .imagem:nth-child(1):hover {
     background-image: url("../images/tigre.jpg");
     width: 550px;
     height: 350px;
 }
 
-.imagens .imagem:nth-child(2){
+.imagens .imagem:nth-child(2) {
     margin: 100px auto;
     width: 500px;
     height: 300px;
@@ -57,6 +57,6 @@ body{
     border: 10px solid rgba(255, 255, 255, 0);
 }
 
-.imagens .imagem:nth-child(2):hover{
+.imagens .imagem:nth-child(2):hover {
     border: 10px solid white;
 }

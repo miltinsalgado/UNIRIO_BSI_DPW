@@ -1,55 +1,55 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html, body {
     height: 100%;
 }
 
-h2{
+h2 {
     margin: 15px auto;
 }
 
-p{
+p {
     margin: 10px auto;
 }
 
-.container{
+.container {
     max-width: 1280px;
     margin: 0 auto;
     padding: 2%;
     text-align: center;
 }
 
-.link-wrapper .link-do-dia a{
+.link-wrapper .link-do-dia a {
     text-decoration: none;
 }
 
-.imagens{
+.imagens {
     margin-top: 50px;
     display: flex;
     justify-content: space-around;
     max-width: 1280px;
 }
 
-.imagem-wrapper{
+.imagem-wrapper {
     width: calc(100% / 4);
 }
 
-.imagem{
+.imagem {
     width: 100%;
     height: 100%;
     border: 4px solid black;
     border-radius: 20px;
 }
 
-.botao{
+.botao {
     margin-top: 20px;
 }
 
-.botao button{
+.botao button {
     color: white;
     background-color: darkgreen;
     border: none;
