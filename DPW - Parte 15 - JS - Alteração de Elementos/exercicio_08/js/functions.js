@@ -1,4 +1,4 @@
-window.addEventListener("load", function criaLinkDoDia() {
+window.addEventListener("load", function criaLinkDoDia () {
     const DATA = new Date();
     diaSemana = DATA.getDay();
 
@@ -51,7 +51,7 @@ window.addEventListener("load", function criaLinkDoDia() {
 
 })
 
-function trocaPosicaoImagens() {
+function trocaPosicaoImagens () {
     let imagens = document.getElementsByClassName("imagem");
     let imagemTemp = {
         src: "",

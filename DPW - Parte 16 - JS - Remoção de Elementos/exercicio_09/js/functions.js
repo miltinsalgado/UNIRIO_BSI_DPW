@@ -1,9 +1,9 @@
-function deletaImagem(elementoSelecionado) {
+function deletaImagem (elementoSelecionado) {
     const ELEMENTO_PAI = document.getElementById("imagens");
     ELEMENTO_PAI.removeChild(elementoSelecionado);
 }
 
-function trocaCorParagrafos() {
+function trocaCorParagrafos () {
     const TEXTO = document.getElementById("texto");
     const PARAGRAFOS = TEXTO.getElementsByTagName("p");
 

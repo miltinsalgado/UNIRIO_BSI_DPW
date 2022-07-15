@@ -1,4 +1,4 @@
-window.addEventListener("load", function geraResposta3() {
+window.addEventListener("load", function geraResposta3 () {
     const numH2 = document.getElementsByTagName("h2").length;
     const numP = document.getElementsByTagName("p").length;
     const numPInfo = document.getElementsByClassName("info").length;
@@ -10,7 +10,7 @@ window.addEventListener("load", function geraResposta3() {
     document.body.appendChild(paragrafoResposta1);
 })
 
-window.addEventListener("load", function geraResposta2() {
+window.addEventListener("load", function geraResposta2 () {
     var resposta2 = "Há " + numPInfo + " parágrafo(s) da classe \"info\" e " + numPSI + " parágrafo(s) da classe \"SI\".";
     const paragrafoResposta2 = document.createElement("p");
     paragrafoResposta2.innerHTML = resposta2;
@@ -22,14 +22,14 @@ window.addEventListener("load", function geraResposta2() {
     document.body.appendChild(segundoH2);
 })
 
-window.addEventListener("load", function geraResposta3() {
+window.addEventListener("load", function geraResposta3 () {
     const terceiroP = document.createElement("p");
     const paragrafos = document.getElementsByTagName("p");
     terceiroP.innerHTML = paragrafos[2].innerHTML;
     document.body.appendChild(terceiroP);
 })
 
-window.addEventListener("load", function mudaaCores() {
+window.addEventListener("load", function mudaaCores () {
     document.getElementsByTagName("h2")[0].style.color = "red";
     document.getElementsByTagName("h2")[0].style.backgroundColor = "yellow";
 })
