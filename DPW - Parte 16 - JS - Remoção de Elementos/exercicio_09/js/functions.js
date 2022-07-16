@@ -3,7 +3,7 @@ function deletaImagem (elementoSelecionado) {
     ELEMENTO_PAI.removeChild(elementoSelecionado);
 }
 
-function trocaCorParagrafos () {
+function trocaCorParagrafos() {
     const TEXTO = document.getElementById("texto");
     const PARAGRAFOS = TEXTO.getElementsByTagName("p");
 
