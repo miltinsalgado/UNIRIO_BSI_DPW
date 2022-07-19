@@ -1,4 +1,4 @@
-function deletaImagem (elementoSelecionado) {
+function deletaImagem(elementoSelecionado) {
     const ELEMENTO_PAI = document.getElementById("imagens");
     ELEMENTO_PAI.removeChild(elementoSelecionado);
 }
