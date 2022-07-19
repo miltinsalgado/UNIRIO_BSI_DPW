@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+<title>Francês</title>
+<meta charset="UTF-8">
+
+<style>
+.central {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+}
+.botao {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.texto_botao {
+    font-weight: bold;
+    font-size: 28px;
+    border: 2px solid black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.texto2_botao {
+    font-weight: bold;
+    font-size: 24px;
+    color: orange;
+}
+.texto3_botao {
+    font-weight: bold;
+    font-size: 24px;
+    color: write;
+    background-color: red;
+}
+</style>
+
+<script>
+var palavras = [
+    ["Poli", "Educado", "Polimento", "Protegido", false],
+    ["Malpoli", "Mal educado", "Fedorento", "Desprotegido", false],
+    ["Paresseux", "Preguiçoso", "Maldoso", "Feliz", false],
+    ["Ouvert", "Aberto", "Parado", "Feliz", false], 
+    ["Généreux", "Generoso", "Genioso", "General", false],
+    ["Méchant", "Maldoso", "Mercado", "Preguiçoso", false],
+    ["Doux", "Doce", "Duro", "Duvidoso", false],
+    ["Heureux", "Feliz", "Horrível", "Honesto", false],
+    ["Le randonnée", "Caminhada", "Roda", "Rancho", false],
+    ["Les chaussures", "Sapatos", "Meias", "Churrascos", false],
+    ["Les chaussettes", "Meias", "Sapatos", "Camisetas", false],
+    ["L'ampoule", "As bolhas", "Borboleta", "Amputação", false],
+    ["Le sac à dos", "Mochila", "Medicamentos", "Sacola Plástica", false],
+    ["Les allumettes", "Fósforos", "Alumínio", "Panelas", false],
+    ["Le routard", "O mochileiro", "Retardado", "Mercado", false]
+];
+var   num_resp = 0;     /* número de questões mostradas */
+var   pontos   = 0;     /* número de questões corretas  */
+var   selecao  = 1;     /* zero = nenhuma resposta, 1 = resposta selecionada */
+var   lista    = [];    /* ordem das questões no aplicativo */
+var   correto  = 0;     /* questão com resposta correta (0 a 2) */
+var   texto    = '';    /* string com pontos/num_resp */
+const max      = 14;    /* número de questões do aplicativo */
+
+/* verifica se os dados abaixo estão armazenados no computador */
+/* são armazenados caso ainda não estejam */ 
+if (!(localStorage.getItem("palavras") && 
+      localStorage.getItem("num_resp") && 
+      localStorage.getItem("pontos"))){
+      localStorage.setItem("palavras", JSON.stringify(palavras));
+      localStorage.setItem("num_resp", JSON.stringify(num_resp));
+      localStorage.setItem("pontos",   JSON.stringify(pontos));
+}
+
+/*  recupera dados armazenados */
+var stringNum_resp = localStorage.getItem("num_resp");
+var num_resp = JSON.parse(stringNum_resp);
+if (num_resp < max){
+    var stringPalavras = localStorage.getItem("palavras");
+    var palavras       = JSON.parse(stringPalavras);
+    var stringPontos   = localStorage.getItem("pontos");
+    var pontos         = JSON.parse(stringPontos);
+}
+else{
+    num_resp = 0;
+}
+
+/* escolhe número da questão */
+function sorteia_num(min, max){
+    num = Math.floor(Math.random() * (max - min + 1) ) + min;
+    return(num);
+}
+
+/* Monta pergunta do quiz */
+function geraPergunta(){
+    if (num_resp < max){
+        if (selecao == 1){
+            document.getElementById("mensagem").textContent = "";
+            i = sorteia_num(0, max);
+            /* verifica se a questao já foi usada */
+            while (palavras[i][4] == true){
+                i = (i + 1) % (max + 1);
+            }
+            palavras[i][4] = true;
+            document.getElementById("frances").innerHTML = palavras[i][0];
+            defineOrdem();
+            texto = pontos + "/" + num_resp;
+            document.getElementById("pontuacao").innerHTML = texto;
+            for (i = 0; i < 3; i++){
+                document.getElementsByClassName("texto_botao")[i].style.backgroundColor = "lightgray";
+                document.getElementsByClassName("texto_botao")[i].style.color = "black";
+                document.getElementsByClassName("texto_botao")[i].textContent = lista[i];
+                document.getElementsByClassName("texto_botao")[i].addEventListener("click", verificaResposta);
+            }
+            selecao = 0;
+        }
+    else{
+        document.getElementById("mensagem").textContent = "Você não escolheu uma opção";
+        }
+    }
+    /* atualiza os dados na memória local */
+    localStorage.setItem("palavras", JSON.stringify(palavras));
+    localStorage.setItem("num_resp", JSON.stringify(num_resp));
+    localStorage.setItem("pontos",   JSON.stringify(pontos));
+}
+
+/* verifica se a resposta está certa ou errada */
+function verificaResposta() {
+    document.getElementById("mensagem").textContent = "";
+    opcao    = this.value;
+    num_resp = num_resp + 1;
+    if (opcao == correto){
+        document.getElementsByClassName("texto_botao")[opcao].style.backgroundColor = "green";
+        document.getElementsByClassName("texto_botao")[opcao].style.color = "white";
+        pontos = pontos + 1;
+    }
+    else {
+        document.getElementsByClassName("texto_botao")[opcao].style.backgroundColor = "red";
+        document.getElementsByClassName("texto_botao")[opcao].style.color = "white";
+    }
+    texto = pontos + "/" + num_resp;
+    document.getElementById("pontuacao").innerHTML = texto;
+
+    for (i = 0; i < 3; i++){
+        document.getElementsByClassName("texto_botao")[i].removeEventListener("click", verificaResposta);
+    }
+
+    /* prepara a reinicialização do jogo, pois todas as questões já foram apresentadas */
+    if (num_resp == max){
+       document.getElementById("proxima").removeEventListener("click", geraPergunta);
+       document.getElementById("proxima").textContent = "Recomeçar";
+       document.getElementById("proxima").addEventListener("click", function(){window.location.reload("Refresh")});
+       localStorage.removeItem("palavras");
+       localStorage.removeItem("num_resp");
+       localStorage.removeItem("pontos");
+    }
+    else{
+        /* atualiza dados na memória, pois o jogo ainda não acabou */
+        localStorage.setItem("palavras", JSON.stringify(palavras));
+        localStorage.setItem("num_resp", JSON.stringify(num_resp));
+        localStorage.setItem("pontos",   JSON.stringify(pontos));
+    }
+    selecao = 1;
+}
+
+/* Define a ordem dos itens apresentados na resposta */
+function defineOrdem(){
+    /* Posição da resposta correta */
+    correto = sorteia_num(0, 2);
+    /* se zero, as outras duas respostas mantém a ordem original */
+    ordem = sorteia_num(0, 1);
+    lista[correto] = palavras[i][1];
+    k = (correto + 1) % 3;
+    if (ordem == 0){
+        lista[k] = palavras[i][2];
+        k = (k + 1) % 3;
+        lista[k] = palavras[i][3];
+    }
+    else{
+        lista[k] = palavras[i][3];
+        k = (k + 1) % 3;
+        lista[k] = palavras[i][2];
+    }
+}
+</script>
+</head>
+
+<body>
+<h1>Teste de Francês</h1>
+<p class=central id="frances"></p>
+<p id="pontuacao"></p>
+
+<form>
+    <div class="botao">
+        <button type="button" id="opcao1" class="texto_botao" value = 0></button>
+        <button type="button" id="opcao2" class="texto_botao" value = 1></button>
+        <button type="button" id="opcao3" class="texto_botao" value = 2></button>
+    </div>
+    <br><br>
+    <div class="botao">
+        <button type="button" id="proxima" class="texto2_botao">Nova Pergunta</button>
+    </div>
+</form>
+
+<p id="mensagem" class="texto3_botao"></p>
+
+<script>
+    geraPergunta(); /* gera a primeira questão */
+    document.getElementById("proxima").addEventListener("click", geraPergunta);
+</script>
+
+</body>
+
+</html>

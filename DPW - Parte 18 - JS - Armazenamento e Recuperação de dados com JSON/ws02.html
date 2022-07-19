@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Storage 02</title>
+        <meta charset="UTF-8">
+        <script>
+            // Armazena dados no WS
+            // Para limpar (Firefox): histórico -> dados offline de sites
+            function armazenaTextos()
+                {
+                    localStorage.setItem("valor1", document.form1.texto1.value);
+                    localStorage.setItem("valor2", document.form1.texto2.value);
+                }
+                
+            // Mostra valor do Texto 1
+            function mostraTexto1()
+                {
+                    texto = "Texto 1 é  <span style='color:red;font-weight: bold;'>" + localStorage.getItem("valor1") + "</span>";
+                    document.getElementById("conteudo").innerHTML = texto;
+                }
+                
+            // Mostra valor do Texto 2
+            function mostraTexto2()
+                {
+                    texto = "Texto 2 é  <span style='color:blue;font-weight: bold;'>" + localStorage.getItem("valor2")  + "</span>";
+                    document.getElementById("conteudo").innerHTML = texto;
+                }
+        </script>
+    </head>
+
+    <body>
+        <!-- Formulário com os campos de entrada -->
+        <form name="form1">
+            Texto 1 <input type="text" name="texto1" id="texto1">
+            Texto 2 <input type="text" name="texto2" id="texto2"><br><br>
+            <input type="button" value="Armazena textos" onClick="armazenaTextos()">
+            <br><br>
+            <input type="button" value="Mostra texto 1" onClick="mostraTexto1()">
+            <input type="button" value="Mostra texto 2" onClick="mostraTexto2()">
+        </form>
+        <!-- Onde o texto é mostrado -->
+        <p id="conteudo"></p>
+        
+        <script>
+          document.form1.texto1.value = localStorage.getItem("valor1") 
+          document.form1.texto2.value = localStorage.getItem("valor2") 
+        </script>
+    </body>
+</html>
