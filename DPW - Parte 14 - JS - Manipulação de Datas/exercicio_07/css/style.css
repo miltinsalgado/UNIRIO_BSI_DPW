@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -39,6 +40,7 @@ p {
     text-align: center;
 }
 
-.input-container, .dia-semana-container {
-    margin: 20px 0 ;
+.input-container,
+.dia-semana-container {
+    margin: 20px 0;
 }

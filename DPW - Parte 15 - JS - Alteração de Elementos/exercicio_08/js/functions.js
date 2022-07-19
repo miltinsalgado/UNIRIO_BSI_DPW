@@ -14,7 +14,7 @@ window.addEventListener("load", function criaLinkDoDia() {
             link.conteudoLink = "Link de " + diasSemana[diaSemana];
             link.enderecoLink = "https://www.twitch.tv";
             break;
-    
+
         case 1:
             link.conteudoLink = "Link de " + diasSemana[diaSemana];
             link.enderecoLink = "https://discord.com";
@@ -66,7 +66,7 @@ function trocaPosicaoImagens() {
 
     imagens[2].src = imagens[1].src;
     imagens[2].alt = imagens[1].alt;
-    
+
     imagens[1].src = imagemTemp.src;
     imagens[1].alt = imagemTemp.alt;
 }

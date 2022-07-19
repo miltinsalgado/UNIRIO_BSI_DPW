@@ -3,7 +3,7 @@ window.addEventListener("load", function geraResposta3() {
     const numP = document.getElementsByTagName("p").length;
     const numPInfo = document.getElementsByClassName("info").length;
     const numPSI = document.getElementsByClassName("SI").length;
-    
+
     var resposta1 = "Há " + numP + " parágrafo(s) e " + numH2 + " cabeçalho(s) H2 na página (não contando com os adicionados por JavaScript).";
     const paragrafoResposta1 = document.createElement("p");
     paragrafoResposta1.innerHTML = resposta1;

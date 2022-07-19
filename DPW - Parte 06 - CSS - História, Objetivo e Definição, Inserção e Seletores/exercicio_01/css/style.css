@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -38,4 +39,3 @@ h2:nth-of-type(1) {
 h2:nth-of-type(1) span {
     color: purple;
 }
-

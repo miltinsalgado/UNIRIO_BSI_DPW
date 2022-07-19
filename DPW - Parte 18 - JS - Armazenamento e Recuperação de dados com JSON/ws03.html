@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Web Storage 03</title>
-        <meta charset="UTF-8">
-    </head>
 
-    <body>
-        <!-- Cria 6 parágrafos para mostrar conteúdo do JSON -->
-        <p id="paragrafo1"></p>
-        <p id="paragrafo2"></p>
-        <p id="paragrafo3"></p>
-        <p id="paragrafo4"></p>
-        <p id="paragrafo5"></p>
-        <p id="paragrafo6"></p>
+<head>
+    <title>Web Storage 03</title>
+    <meta charset="UTF-8">
+</head>
 
-        <script>
-            // Estrutura de Dados de um objeto JS
-            var dadosAluno = {
-                Nome: 'João da Silva',
-                Matricula: '2019100001',
-                Esporte: ['Futebol', 'Natação', 'Volei'],
-                Nota: {DPW: 10, FSI: 9.5, MB: 7.3, OC: 8.1}
-            };
-            // Converte objeto JS em JSON e armazena em 'aluno'
-            localStorage.setItem("aluno", JSON.stringify(dadosAluno));
-            
-            // Obtém JASON com chave 'aluno' e armazena na string stringAluno
-            var stringAluno = localStorage.getItem("aluno");
-            
-            // Converte JASON em um objeto JS
-            var objetoAluno = JSON.parse(stringAluno);
-            
-            // Mostra todo o conteúdo do obejto JS
-            document.getElementById("paragrafo1").innerHTML = "Armazenado = " + localStorage.aluno;
-            
-            // Mostra o nome do aluno
-            document.getElementById("paragrafo2").innerHTML = "Nome = " + objetoAluno.Nome;
-            
-            // Mostra a matrícula do aluno
-            document.getElementById("paragrafo3").innerHTML = "Matricula = " + objetoAluno.Matricula;
-            
-            // Mostra os esportes praticados pelo aluno
-            document.getElementById("paragrafo4").innerHTML = "Esportes = ";
-            for (i in objetoAluno.Esporte){
-                // Monta a string com os esportes
-                if (i != 0)
-                    document.getElementById("paragrafo4").innerHTML += ", ";
-                // Adiciona esporte i
-                document.getElementById("paragrafo4").innerHTML += objetoAluno.Esporte[i];
-            }
-            
-            // Mostra apenas a nota de FSI
-            document.getElementById("paragrafo5").innerHTML = "Nota FSI = " + objetoAluno.Nota["FSI"];
+<body>
+    <!-- Cria 6 parágrafos para mostrar conteúdo do JSON -->
+    <p id="paragrafo1"></p>
+    <p id="paragrafo2"></p>
+    <p id="paragrafo3"></p>
+    <p id="paragrafo4"></p>
+    <p id="paragrafo5"></p>
+    <p id="paragrafo6"></p>
 
-            // Mostra todas as notas
-            document.getElementById("paragrafo6").innerHTML = "<b>Notas<b> <br>";
-            for (i in objetoAluno.Nota){
-                // Monta a string com as notas
-                document.getElementById("paragrafo6").innerHTML += i + ": " + objetoAluno.Nota[i] + "<br>";
-            }
-        </script>
-    </body>
+    <script>
+        // Estrutura de Dados de um objeto JS
+        var dadosAluno = {
+            Nome: 'João da Silva',
+            Matricula: '2019100001',
+            Esporte: ['Futebol', 'Natação', 'Volei'],
+            Nota: { DPW: 10, FSI: 9.5, MB: 7.3, OC: 8.1 }
+        };
+        // Converte objeto JS em JSON e armazena em 'aluno'
+        localStorage.setItem("aluno", JSON.stringify(dadosAluno));
+
+        // Obtém JASON com chave 'aluno' e armazena na string stringAluno
+        var stringAluno = localStorage.getItem("aluno");
+
+        // Converte JASON em um objeto JS
+        var objetoAluno = JSON.parse(stringAluno);
+
+        // Mostra todo o conteúdo do obejto JS
+        document.getElementById("paragrafo1").innerHTML = "Armazenado = " + localStorage.aluno;
+
+        // Mostra o nome do aluno
+        document.getElementById("paragrafo2").innerHTML = "Nome = " + objetoAluno.Nome;
+
+        // Mostra a matrícula do aluno
+        document.getElementById("paragrafo3").innerHTML = "Matricula = " + objetoAluno.Matricula;
+
+        // Mostra os esportes praticados pelo aluno
+        document.getElementById("paragrafo4").innerHTML = "Esportes = ";
+        for (i in objetoAluno.Esporte) {
+            // Monta a string com os esportes
+            if (i != 0)
+                document.getElementById("paragrafo4").innerHTML += ", ";
+            // Adiciona esporte i
+            document.getElementById("paragrafo4").innerHTML += objetoAluno.Esporte[i];
+        }
+
+        // Mostra apenas a nota de FSI
+        document.getElementById("paragrafo5").innerHTML = "Nota FSI = " + objetoAluno.Nota["FSI"];
+
+        // Mostra todas as notas
+        document.getElementById("paragrafo6").innerHTML = "<b>Notas<b> <br>";
+        for (i in objetoAluno.Nota) {
+            // Monta a string com as notas
+            document.getElementById("paragrafo6").innerHTML += i + ": " + objetoAluno.Nota[i] + "<br>";
+        }
+    </script>
+</body>
+
 </html>

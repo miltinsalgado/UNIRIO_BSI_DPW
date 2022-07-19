@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="Milton Salgado Leandro">
 
-        <title>Exercício JS</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Milton Salgado Leandro">
 
-        <link href="css/style.css" rel="stylesheet">
-        <link href="images/icons/icons8-task-96.png" rel="icon">
+    <title>Exercício JS</title>
 
-        <script src="js/functions.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="images/icons/icons8-task-96.png" rel="icon">
 
-    </head>
-    <body>
-        <div class="container"></div>
+    <script src="js/functions.js"></script>
 
-            <div class="imagens" id="imagens">
-                <div class="imagem-wrapper" onclick="deletaImagem(this)"><img class="imagem" src="images/girassol.webp" alt="Girassol"></div>
-                <div class="imagem-wrapper" onclick="deletaImagem(this)"><img class="imagem" src="images/margarida.webp" alt="Margarida"></div>
-                <div class="imagem-wrapper" onclick="deletaImagem(this)"><img class="imagem" src="images/dente-de-leao.webp" alt="Dente-de-Leão"></div>
-            </div>
+</head>
 
-            <div class="texto" id="texto">
-                <p>Páragrafo 1</p>
-                <p>Páragrafo 2</p>
-                <p>Páragrafo 3</p>
-                <p>Páragrafo 4</p>
-                <p>Páragrafo 5</p>
-            </div>
+<body>
+    <div class="container">
 
-            <div class="botao"><button onclick="trocaCorParagrafos()">Trocar as Cores dos Parágrafos 1, 3 e 5</button></div>
-            
+        <div class="imagens" id="imagens">
+            <div class="imagem-wrapper" onclick="deletaImagem(this)"><img class="imagem" src="images/girassol.webp"
+                    alt="Girassol"></div>
+            <div class="imagem-wrapper" onclick="deletaImagem(this)"><img class="imagem" src="images/margarida.webp"
+                    alt="Margarida"></div>
+            <div class="imagem-wrapper" onclick="deletaImagem(this)"><img class="imagem" src="images/dente-de-leao.webp"
+                    alt="Dente-de-Leão"></div>
         </div>
-    </body>
+
+        <div class="texto" id="texto">
+            <p>Páragrafo 1</p>
+            <p>Páragrafo 2</p>
+            <p>Páragrafo 3</p>
+            <p>Páragrafo 4</p>
+            <p>Páragrafo 5</p>
+        </div>
+
+        <div class="botao"><button onclick="trocaCorParagrafos()">Trocar as Cores dos Parágrafos 1, 3 e 5</button></div>
+
+    </div>
+</body>
+
 </html>

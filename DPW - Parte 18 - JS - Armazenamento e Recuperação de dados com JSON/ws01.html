@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Web Storage 01</title>
-        <meta charset="UTF-8">
-        <script>
-            // Cria o contador 'num' se ainda não existe
-            // Para limpar (Firefox): histórico -> dados offline de sites
-            function incrementaContador() {
-                if (typeof(Storage) !== "undefined"){                     // navegador suporta ws
-                    if (localStorage.num)                                 // variável já existe
-                        localStorage.num = Number(localStorage.num) + 1;  // a partir da seguna vez
-                    else
-                        localStorage.num = 1;                             // primeira vez
-                    document.getElementById("total").innerHTML = 
-                        "Você clicou o botão <span style='color:red;font-weight: bold;'>" + 
-                        localStorage.num + "</span> vez(es).";
-                }
-                else                                                      // Não suporta WS
-                    document.getElementById("total").innerHTML = "Seu navegador não suporta Web Storage";
-            }
-        </script>
-    </head>
 
-    <body>
-        <p><button onclick="incrementaContador()" type="button">Clique aqui!</button></p>
-        <!-- Onde o contador é mostrado -->
-        <p id="total"></p>
-    </body>
+<head>
+    <title>Web Storage 01</title>
+    <meta charset="UTF-8">
+    <script>
+        // Cria o contador 'num' se ainda não existe
+        // Para limpar (Firefox): histórico -> dados offline de sites
+        function incrementaContador() {
+            if (typeof (Storage) !== "undefined") {                     // navegador suporta ws
+                if (localStorage.num)                                 // variável já existe
+                    localStorage.num = Number(localStorage.num) + 1;  // a partir da seguna vez
+                else
+                    localStorage.num = 1;                             // primeira vez
+                document.getElementById("total").innerHTML =
+                    "Você clicou o botão <span style='color:red;font-weight: bold;'>" +
+                    localStorage.num + "</span> vez(es).";
+            }
+            else                                                      // Não suporta WS
+                document.getElementById("total").innerHTML = "Seu navegador não suporta Web Storage";
+        }
+    </script>
+</head>
+
+<body>
+    <p><button onclick="incrementaContador()" type="button">Clique aqui!</button></p>
+    <!-- Onde o contador é mostrado -->
+    <p id="total"></p>
+</body>
+
 </html>
